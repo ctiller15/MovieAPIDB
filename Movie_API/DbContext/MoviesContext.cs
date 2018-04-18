@@ -12,5 +12,7 @@ namespace Movie_API.Data
         {
 
         }
+
+        public DbSet<Models.Movie> Movies { get; set; }
     }
 }
