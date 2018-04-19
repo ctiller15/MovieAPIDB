@@ -22,7 +22,7 @@ namespace Movie_API.Controllers
         public IEnumerable<Movie> Get(string genre)
         {
             var db = new MoviesContext();
-            return db.Movies.Where(x => x.Genre == genre).ToList();
+            return db.Movies.Where(x => x.Genre.Name == genre).ToList();
         }
 
         public IHttpActionResult Post(string name)

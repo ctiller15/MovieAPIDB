@@ -186,7 +186,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MovieFactoryController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
-    <Compile Include="Controllers\MovieUpdateController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DbContext\MoviesContext.cs" />
@@ -197,7 +196,12 @@
     <Compile Include="Migrations\201804181828386_AddMoviesTable.Designer.cs">
       <DependentUpon>201804181828386_AddMoviesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804191403047_CreateGenreTable.cs" />
+    <Compile Include="Migrations\201804191403047_CreateGenreTable.Designer.cs">
+      <DependentUpon>201804191403047_CreateGenreTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -272,6 +276,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201804181828386_AddMoviesTable.resx">
       <DependentUpon>201804181828386_AddMoviesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804191403047_CreateGenreTable.resx">
+      <DependentUpon>201804191403047_CreateGenreTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

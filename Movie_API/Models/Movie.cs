@@ -9,7 +9,9 @@ namespace Movie_API.Models
     {
         public int ID { get; set; }
         public string Title { get; set; }
-        public string Genre { get; set; }
+
+        public int? GenreID { get; set; }
+        public Genre Genre { get; set; }
         public int Rating { get; set; }
     }
 }
