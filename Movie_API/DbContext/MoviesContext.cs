@@ -14,5 +14,6 @@ namespace Movie_API.Data
         }
 
         public DbSet<Models.Movie> Movies { get; set; }
+        public DbSet<Models.Genre> Genres { get; set; }
     }
 }

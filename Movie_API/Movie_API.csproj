@@ -200,6 +200,10 @@
     <Compile Include="Migrations\201804191403047_CreateGenreTable.Designer.cs">
       <DependentUpon>201804191403047_CreateGenreTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804191555316_CreateDBLinkToGenres.cs" />
+    <Compile Include="Migrations\201804191555316_CreateDBLinkToGenres.Designer.cs">
+      <DependentUpon>201804191555316_CreateDBLinkToGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -279,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804191403047_CreateGenreTable.resx">
       <DependentUpon>201804191403047_CreateGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804191555316_CreateDBLinkToGenres.resx">
+      <DependentUpon>201804191555316_CreateDBLinkToGenres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

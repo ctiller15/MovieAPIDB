@@ -37,13 +37,26 @@ namespace Movie_API.Controllers
             return Ok(newMovie);
         }
 
-        public IHttpActionResult Put(int ID, [FromBody]Movie movie)
+        public IHttpActionResult Put(int ID, [FromBody]Dictionary<string, string> dict)
         {
             var db = new MoviesContext();
             var movieToUpdate = db.Movies.First(x => x.ID == ID);
-            movieToUpdate.Title = movie.Title;
-            movieToUpdate.Rating = movie.Rating;
-            movieToUpdate.Genre = movie.Genre;
+            //foreach(var item in dict)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            movieToUpdate.Title = dict["Title"];
+            movieToUpdate.Rating = Convert.ToInt32(dict["Rating"]);
+            var newGenre = dict["Genre"];
+            var usedGenre = db.Genres.First(x => x.Name == newGenre);
+            //var newGenre = new Models.Genre()
+            //{
+            //    Name = dict["Genre"]
+            //};
+            //movieToUpdate.Genre = newGenre;
+            //movieToUpdate.Title = object.Title;
+            //movieToUpdate.Rating = movie.Rating;
+            //movieToUpdate.Genre.Name = GenreName;
             db.SaveChanges();
             return Ok(movieToUpdate);
         }
