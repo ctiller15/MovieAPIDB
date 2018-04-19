@@ -36,5 +36,16 @@ namespace Movie_API.Controllers
             db.SaveChanges();
             return Ok(newMovie);
         }
+
+        public IHttpActionResult Put(int ID, [FromBody]Movie movie)
+        {
+            var db = new MoviesContext();
+            var movieToUpdate = db.Movies.First(x => x.ID == ID);
+            movieToUpdate.Title = movie.Title;
+            movieToUpdate.Rating = movie.Rating;
+            movieToUpdate.Genre = movie.Genre;
+            db.SaveChanges();
+            return Ok(movieToUpdate);
+        }
     }
 }
